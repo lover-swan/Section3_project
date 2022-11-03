@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>음악데이터를 입력하세요</h1><br>
+    <form method="GET" action="/calculate">
+        <div>
+            <label for="danceability">danceability(0~1 실수) </label>
+            <input type="text" name="danceability">
+        </div>
+        <div>
+            <label for="energe">energe(0~1 실수) </label>
+            <input type="text" name="energe">
+        </div>
+        <div>
+            <label for="key">key(-1~11 정수) </label>
+            <input type="text" name="key">
+        </div>
+        <div>
+            <label for="loudness">loudness(-40~10 실수) </label>
+            <input type="text" name="loudness">
+        </div>
+        <div>
+            <label for="mode">mode(0 또는 1) </label>
+            <input type="text" name="mode">
+        </div>
+        <div>
+            <label for="speechiness">speechiness(0~1 실수) </label>
+            <input type="text" name="speechiness">
+        </div>
+        <div>
+            <label for="acousticness">acousticness(0~1 실수) </label>
+            <input type="text" name="acousticness">
+        </div>
+        <div>
+            <label for="instrumentalness">instrumentalness(0~1 실수) </label>
+            <input type="text" name="instrumentalness">
+        </div>
+        <div>
+            <label for="liveness">liveness(0~1 실수) </label>
+            <input type="text" name="liveness">
+        </div>
+        <div>
+            <label for="valence">valence(0~1 실수) </label>
+            <input type="text" name="valence">
+        </div>
+        <div>
+            <label for="tempo">tempo(0~1 실수) </label>
+            <input type="text" name="tempo">
+        </div>
+        <div>
+            <label for="duration_ms">duration_ms(0~ 정수) </label>
+            <input type="text" name="duration_ms">
+        </div>
+        <div>
+            <label for="time_signature">time_signature(정수) </label>
+            <input type="text" name="time_signature">
+        </div>
+        <div class="button">
+            <button type="submit">제출</button>
+        </div>
+    </form>
+    <div>
+        <p>
+            {% if val == None %}
+                <h5> 값을 입력해주세요 </h5>
+            {% else %}
+                <p>
+                    <font size="6">이 곡의 장르는 {{val}} 입니다.</font>
+                </p>
+            {% endif %}
+        </p>
+    </div>
+</body>
+</html>
+
